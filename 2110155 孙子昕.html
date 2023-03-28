@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    * {
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      background-color: rgb(252,214,220);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+    }
+    .container {
+      position: relative;
+      width:100%;
+      max-width: 1000px;
+      min-height: 1000px;
+      background-color: #fff;
+      margin: 50px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+
+
+    }
+
+    .container .leftSide {
+      position: relative;
+      background-color: rgb(241,126,126);
+      padding:40px;
+    }
+
+    .profile {
+      position:relative;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .profile img{
+      width:200px;
+      height:200px;
+      border-radius: 50%;
+    }
+
+    .profile h2{
+      color: #fff;
+      font-size: 1em;
+      margin-top: 20px;
+      text-transform:uppercase;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.4em;
+    }
+    .profile h2 span {
+      font-size: 0.8em;
+      font-weight: 300;
+    }
+
+    .contactInfo {
+      padding-top: 40px;
+    }
+
+    .contactInfo .title {
+      color:#fff;
+      margin-bottom: 20px;
+    }
+
+    .contactInfo ul {
+      position: relative;
+    }
+    .contactInfo ul li {
+      position: relative;
+      list-style: none;
+      margin: 10px 0;
+
+    }
+
+    .contactInfo ul li .material-icons {
+      display: inline-block;
+      width: 30px;
+      font-size: 18px;
+      color: pink;
+    }
+
+    .contactInfo ul li .text {
+      color:#fff;
+    }
+
+    .contactInfo ul li a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .contactInfo.education li {
+      margin-bottom: 15px;
+    }
+
+    .contactInfo.education h5 {
+      color:pink;
+    }
+
+    .contactInfo.education h4 {
+      color:white;
+    }
+
+    .contactInfo.language .percent {
+      position: relative;
+      width:100%;
+      height: 6px;
+      background-color: pink;
+      display: block;
+      margin-top: 5px;
+    }
+    .contactInfo.language .percent div{
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      background-color: coral;
+    }
+
+
+    .container .rightSide {
+      position: relative;
+      background-color: white;
+      padding:40px;
+    }
+
+    .about {
+      margin-bottom: 50px;
+    }
+
+    .about:last-child {
+      margin-bottom: 0;
+    }
+
+    .title2 {
+      color:rgb(241,126,126);
+      margin-bottom: 10px;
+    }
+
+    p {
+      color:#333;
+    }
+
+    .about .box {
+      display: flex;
+      margin: 20px 0;
+    }
+
+    .about .box .year-company {
+      min-width: 150px;
+    }
+
+    .about .box .year-company h5 {
+      color:darkgray;
+    }
+
+    .about .box .text h4 {
+      color:rgb(241,126,126);
+      font-size: 16px;
+    }
+
+    .skills .box {
+      position:relative;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .skills .box h4 {
+      color:darkgrey;
+    }
+
+    .skills .box .percent {
+      position: relative;
+      width: 100%;
+      height: 10px;
+      background-color: pink;
+    }
+
+    .skills .box .percent div {
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      background-color: coral;
+    }
+
+    .interest ul {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+    }
+    .interest ul li {
+      list-style: none;
+      color:#333;
+      margin: 10px 0;
+
+    }
+
+    .interest ul li .material-icons {
+      color:rgb(241,126,126);
+      font-size: 20px;
+    }
+
+
+    @media (max-width:1000px) {
+      .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+      }
+      .interest ul {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+    }
+
+    @media (max-width:600px) {
+      .about .box {
+        flex-direction:column;
+
+      }
+      .about .box .year-company{
+        margin-bottom: 5px;
+      }
+      .skills .box {
+        grid-template-columns: repeat(1,1fr);
+      }
+      .interest ul {
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="leftSide">
+    <div class="profile">
+      <img src="1.png" alt="personal pic">
+      <h2>孙子昕 03.1.14 <br><span>大二  新闻传播学类 </span></h2>
+    </div>
+
+    <div class="contactInfo">
+      <h3 class="title">联系方式</h3>
+      <ul>
+        <li>
+                    <span class="material-icons">
+                        call
+                        </span>
+          <span class="text">181 0940 9302</span>
+        </li>
+        <li>
+                    <span class="material-icons">
+                        email
+                        </span>
+          <span class="text">397327859@qq.com</span>
+        </li>
+
+        <li>
+                    <span class="material-icons">
+                        location_on
+                        </span>
+          <span class="text">甘肃省兰州市安宁区</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="contactInfo education">
+      <h3 class="title">教育经历</h3>
+      <ul>
+        <li>
+          <h5>2021-</h5>
+          <h4>南开大学</h4>
+          <span class="text">新闻传播学类</span>
+        </li>
+        <li>
+          <h5>2018-2021</h5>
+          <h4>西北师大附中</h4>
+          <span class="text">文科</span>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="contactInfo language">
+      <h3 class="title">兴趣爱好</h3>
+      <ul>
+        <li> <span class="text">reading</span> </li>
+        <li> <span class="percent">
+                        <div style="width:calc(562/710*100%)"></div>
+
+                    </span> </li>
+
+        <li> <span class="text">reacting</span> </li>
+        <li> <span class="percent">
+                        <div style="width:calc(525/710*100%)"></div>
+
+                    </span> </li>
+
+        <li> <span class="text">chatting</span> </li>
+        <li> <span class="percent">
+                        <div style="width:calc(85/90*100%)"></div>
+
+                    </span> </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="rightSide">
+    <div class="about">
+      <h2 class="title2">个人介绍</h2>
+      <p>我喜欢有很多朋友，喜欢旅行阅读追星！只不过不打游戏，如果你有任何除游戏以外的兴趣，都可以和我聊很久！<br><br>其实从一个网页介绍自己远远不够，想要认识我，就到现实中和我相遇吧！</p>
+    </div>
+
+    <div class="about">
+      <h2 class="title2">我喜欢的</h2>
+      <div class="box">
+        <div class="year-company">
+          <h5>小学-至今</h5>
+          <h5>reading</h5>
+
+        </div>
+
+        <div class="text">
+          <h4>harry potter</h4>
+          <p>my favorite</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="year-company">
+          <h5>初中-现在</h5>
+          <h5>making friends</h5>
+
+        </div>
+
+        <div class="text">
+          <h4>lots of</h4>
+          <p>playing games with friends</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="year-company">
+          <h5>高中-现在</h5>
+          <h5>taking photos</h5>
+
+        </div>
+
+        <div class="text">
+          <h4>studying</h4>
+          <p>memorizing the beauty</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="about skills">
+      <h2 class="title2">生活中常干的事</h2>
+      <div class="box">
+        <h4>playing</h4>
+        <div class="percent">
+          <div style="width:95%"></div>
+        </div>
+
+      </div>
+
+      <div class="box">
+        <h4>chatting</h4>
+        <div class="percent">
+          <div style="width:88%"></div>
+        </div>
+
+      </div>
+
+      <div class="box">
+        <h4>web</h4>
+        <div class="percent">
+          <div style="width:95%"></div>
+        </div>
+
+      </div>
+
+      <div class="box">
+        <h4>Reacting</h4>
+        <div class="percent">
+          <div style="width:90%"></div>
+        </div>
+
+      </div>
+
+      <div class="box">
+        <h4>writing</h4>
+        <div class="percent">
+          <div style="width:80%"></div>
+        </div>
+
+      </div>
+
+      <div class="box">
+        <h4>reading</h4>
+        <div class="percent">
+          <div style="width:80%"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about interest">
+      <h2 class="title2">兴趣爱好</h2>
+      <ul>
+        <li>
+                        <span class="material-icons" style="vertical-align:-6px;">
+                            game
+                            </span>
+          音游</li>
+        <li>
+                        <span class="material-icons" style="vertical-align:-6px;">
+                            ways
+                            </span>
+          交流</li>
+        <li>
+                        <span class="material-icons" style="vertical-align:-6px;">
+                            life
+                            </span>
+          美食</li>
+        <li>
+
+                        <span class="material-icons" style="vertical-align:-6px;">
+                            creatures
+                            </span>猫猫</li>
+      </ul>
+
+    </div>
+
+
+
+
+
+  </div>
+</div>
+</body>
+</html> 作者：孙子昕
